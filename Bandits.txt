@@ -186,3 +186,26 @@ ls -la // list long format including hidden files
 ./bandit20-do ls -la /etc/bandit_pass
 ./bandit20-do cat /etc/bandit_pass/bandit20
 GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+
+lvl 20 --> lvl 21 : 
+ls
+// Note : lvnp listen verbously noDNSresolution from port 
+nc -lvnp 35000 // Note open a connection through port 35000
+// on a new tab connect to bandit20
+// on the new tab ./suconnect 35000
+copy paste the password in the first tab and obtain new password
+gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
+
+lvl 21 --> lvl 22 : 
+cd /etc/cron.d/
+ls -la
+cat cronjob_bandit22
+// Answer : @reboot bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
+// * * * * * bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
+ls -l /usr/bin/cronjob_bandit22.sh
+// Answer : -rwxr-x--- 1 bandit22 bandit21 130 Oct 16 14:00 /usr/bin/cronjob_bandit22.sh
+cat /usr/bin/cronjob_bandit22.sh
+// Answer : /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+cd /tmp/
+cat t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
