@@ -1,13 +1,6 @@
 lvl 0 : 
-Level Goal
-The password for the next level is stored in a file called readme located in the home directory. Use this password to log into bandit1 using SSH. Whenever you find a password for a level, use SSH (on port 2220) to log into that level and continue the game.
-
-Solution
-We’re given a username/password combo of bandit0, and we need to use port 2220 to SSH into 
-
 ssh bandit0@bandit.labs.overthewire.org -p 2220
 bandit0
-
 
 lvl 0 --> lvl 1 : 
 ls
@@ -16,9 +9,6 @@ ssh -p 2220 bandit1@bandit.labs.overthewire.org
 boJ9jbbUNNfktd78OOpsqOltutMc3MY1
 
 lvl 1 --> lvl 2 : 
-Level Goal
-The password for the next level is stored in a file called – located in the home directory.
-
 ls
 cat ./-
 CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
@@ -43,7 +33,9 @@ lvl 4 --> lvl 5 :
 ls
 cd inhere
 ls 
-cat ./* // Alternative : file inhere/*
+cat ./* // Alternative : file inhere/* 
+strings ./*
+koReBOKuIDDepwhWk7jZC0RTdopnAYKh
 cat ./-file07
 koReBOKuIDDepwhWk7jZC0RTdopnAYKh
 ssh -p 2220 bandit5@bandit.labs.overthewire.org
@@ -54,9 +46,8 @@ cd inhere
 ls -lart * // recursive ls, all the files in each directory
 find -size 1033c
 
-// Alternative : find inhere ! -executable -size 1033c -exec file {} \;
-What I’m doing is checking that the file isn’t executable with ! -executable (! meaning not), checking that the size is 1033 bytes with -size 1033c (for whatever reason, b is 512-byte blocks and c is bytes), and then passing whatever results we get to file with -exec file {} \;.
-
+// Alternative : find \! -executable -size 1033c
+What I’m doing is checking that the file isn’t executable with ! -executable (! meaning not), checking that the size is 1033 bytes with -size 1033c (for whatever reason, b is 512-byte blocks and c is bytes)
 cat ./maybehere07/.file2
 DXjZPULLxYr17uwoI01bNLQbtFemEgo7
 ssh -p 2220 bandit6@bandit.labs.overthewire.org
@@ -83,15 +74,15 @@ UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
 ssh -p 2220 bandit9@bandit.labs.overthewire.org
 
 lvl 9 --> lvl 10 : 
-cat data.txt
-strings -n 10 data.txt
-strings data.txt | grep "="
+cat data.txt | strings
+cat data.txt | strings | grep "="
 truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
 ssh -p 2220 bandit10@bandit.labs.overthewire.org
 
 lvl 10 -- > lvl 11 :
-cat data.text 
-base64 -d data.txt // -e would encode -d would decode 
+cat data.txt
+cat data.txt | base64 -d 
+// -e would encode -d would decode 
 IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
 ssh -p 2220 bandit11@bandit.labs.overthewire.org
 
