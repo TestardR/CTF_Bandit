@@ -100,14 +100,19 @@ cat data.txt
 python -c 'print "Gur cnffjbeq vf 5Gr8L4qetPEsPk8htqjhRK8XSP6x2RHh".decode("rot13")'
 or
 echo "Gur cnffjbeq vf 5Gr8L4qetPEsPk8htqjhRK8XSP6x2RHh" | tr '[A-Za-z]' '[N-ZA-Mn-za-m]'
+// Note : tr just translated the characters from a to z by 13 by giving a new range to map to (n-z, a-m). The same was done for the capital letters.
+
 ssh -p 2220 bandit12@bandit.labs.overthewire.org
 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 
 lvl 12 --> lvl 13 : 
 mkdir /tmp/cryptocat
+cp data.txt /tmp/cryptocat
 cd /tmp/cryptocat
-ls
+
 xxd -r data.txt > data // turn hexdump into binary 
+// Notes: The -r option reverses the hexdump, and the > operator tells it to output to a new file.
+
 file data
 mv data data.gz
 gzip -d data.gz
