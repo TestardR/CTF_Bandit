@@ -159,5 +159,30 @@ ssh -p 2220 bandit16@bandit.labs.overthewire.org
 
 lvl 16 --> lvl 17 : 
 nmap localhost -p 31000-32000
-echo cluFn7wTiGryunymYOu4RcffSxQluehd | openssl s_client -quiet -connect localhost:31790
-echo cluFn7wTiGryunymYOu4RcffSxQluehd | openssl s_client -quiet -connect localhost:31790 > /tmp/key/b16key
+ncat localhost --ssl 31790
+// ncat opens a connection
+// Alternative : echo cluFn7wTiGryunymYOu4RcffSxQluehd | openssl s_client -quiet -connect localhost:31790
+touch /tmp/key
+cd /tmp/
+nano pvt.key // copy paste the sshkey inside it, ctrl x to exit
+cat pvt.key
+chmod 600 pvt.key // change the permission on the file
+ssh bandit17@localhost -i pvt.key
+
+lvl 17 --> lvl 18 :
+diff passwords.old passwords.new
+kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
+
+lvl 18 --> lvl 19 : 
+ssh bandit18@localhost "bash --noprofile"
+ls 
+cat reademe
+IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
+
+lvl 19 --> lvl 20 : 
+ls -la // list long format including hidden files
+// Result : -rwsr-x---  1 bandit20 bandit19 7296 Oct 16 14:00 bandit20-do, the s at the beginning means that we bandit20 clearance to read the file as bandit19
+./bandit20-do id
+./bandit20-do ls -la /etc/bandit_pass
+./bandit20-do cat /etc/bandit_pass/bandit20
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j
