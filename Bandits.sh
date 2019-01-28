@@ -144,12 +144,12 @@ BfMYroe26WYalil77FoDi9qh59eK5xNr
 ssh -p 2220 bandit15@bandit.labs.overthewire.org
 
 lvl 15 --> lvl 16 :
-echo BfMYroe26WYalil77FoDi9qh59eK5xNr | openssl s_client -quiet -connect localhost:30001
+echo BfMYroe26WYalil77FoDi9qh59eK5xNr | openssl s_client -quiet -connect localhost:30001 // could have used -ign_eof
 cluFn7wTiGryunymYOu4RcffSxQluehd
 ssh -p 2220 bandit16@bandit.labs.overthewire.org
 
 lvl 16 --> lvl 17 : 
-nmap localhost -p 31000-32000
+nmap localhost -p 31000-32000 // nmap: network scanner
 ncat localhost --ssl 31790
 // ncat opens a connection
 // Alternative : echo cluFn7wTiGryunymYOu4RcffSxQluehd | openssl s_client -quiet -connect localhost:31790
@@ -165,9 +165,9 @@ diff passwords.old passwords.new
 kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
 
 lvl 18 --> lvl 19 : 
-ssh bandit18@localhost "bash --noprofile"
+ssh bandit18@localhost "bash --noprofile" // Alternative: "cat readme"
 ls 
-cat reademe
+cat readme
 IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
 
 lvl 19 --> lvl 20 : 
