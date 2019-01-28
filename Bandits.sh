@@ -133,13 +133,13 @@ ssh -p 2220 bandit13@bandit.labs.overthewire.org
 lvl 13 --> lvl 14 : 
 ls
 cat sshey.private
-ssh -i ./sshkey.private bandit14@localhost
+ssh -i ./sshkey.private bandit14@localhost // -i identifier
 cat /etc/bandit_pass/bandit14
 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
 ssh -p 2220 bandit14@bandit.labs.overthewire.org
 
 lvl 14 --> lvl 15 :
-echo 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e | nc -v localhost 30000
+echo 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e | nc -v localhost 30000 // nc: netcat to pipe data to a port
 BfMYroe26WYalil77FoDi9qh59eK5xNr
 ssh -p 2220 bandit15@bandit.labs.overthewire.org
 
