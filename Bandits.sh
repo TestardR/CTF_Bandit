@@ -324,7 +324,6 @@ ssh -p 2220 bandit30@bandit.labs.overthewire.org
 lvl 30 --> lvl 31
 mkdir /tmp/rom30
 cd /tmp/rom30
-git ssh://bandit30-git@localhost/home/bandit30-git/repo
 git clone ssh://bandit30-git@localhost/home/bandit30-git/repo
 cd repo
 cat README.md
@@ -334,3 +333,19 @@ ls
 cat packed-refs
 git show f17132340e8ee6c159e0a4a6bc6f80e1da3b1aea
 47e603bb428404d265f59c42920d81e5
+ssh -p 2220 bandit31@bandit.labs.overthewire.org
+
+lvl 31 --> lvl 32
+mkdir /tmp/rom31
+cd /tmp/rom31
+git clone ssh://bandit31-git@localhost/home/bandit31-git/repo
+47e603bb428404d265f59c42920d81e5
+nano key.txt // Inside 'May I come in ?'
+git add key.txt
+git add key.txt -f
+git commit -m "file added"
+git push
+47e603bb428404d265f59c42920d81e5
+56a9bf19c63d650ce78e6ec0354ee45e
+
+lvl 32 --> lvl 33
