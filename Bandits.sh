@@ -320,3 +320,17 @@ git checkout remotes/origin/dev
 git show ... (a commit)
 5b90576bedb2cc04c86a9e924ce42faf
 ssh -p 2220 bandit30@bandit.labs.overthewire.org
+
+lvl 30 --> lvl 31
+mkdir /tmp/rom30
+cd /tmp/rom30
+git ssh://bandit30-git@localhost/home/bandit30-git/repo
+git clone ssh://bandit30-git@localhost/home/bandit30-git/repo
+cd repo
+cat README.md
+ls -a
+cd .git
+ls
+cat packed-refs
+git show f17132340e8ee6c159e0a4a6bc6f80e1da3b1aea
+47e603bb428404d265f59c42920d81e5
