@@ -258,3 +258,11 @@ chmod +x hammer.sh
 cat bruteforce.txt | nc localhost 30002
 uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
 ssh -p 2220 bandit25@bandit.labs.overthewire.org
+
+lvl 25 --> lvl 26
+ls
+cat bandit26.sshkey
+ssh -i bandit26.sshkey bandit26@localhost // reduce screen size a lot 
+v
+:e /etc/bandit_pass/bandit26
+5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
