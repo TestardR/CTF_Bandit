@@ -294,12 +294,29 @@ ssh -p 2220 bandit28@bandit.labs.overthewire.org
 
 lvl 28 -- > lvl 29
 mkdir /tmp/rom28
-cd /tmpt/rom28
+cd /tmp/rom28
 git clone ssh://bandit28-git@localhost/home/bandit28-git/repo
 0ef186ac70e04ea33b4c1853d2526fa2
 cd repo
 cat README.md
 git log
 git show 073c27c130e6ee407e12faad1dd3848a110c4f95
-bbc96594b4e001778eee9975372716b23
+bbc96594b4e001778eee9975372716b2
 ssh -p 2220 bandit29@bandit.labs.overthewire.org
+
+lvl 29 --> lvl 30
+mkdir /tmp/rom29
+cd /tmp/rom29
+git clone ssh://bandit29-git@localhost/home/bandit29-git/repo
+0ef186ac70e04ea33b4c1853d2526fa2
+cd repo
+cat README.md
+git log
+git show ...
+git branch // still on master
+git branch -a // to see other branches
+git checkout remotes/origin/dev
+git checkout remotes/origin/dev
+git show ... (a commit)
+5b90576bedb2cc04c86a9e924ce42faf
+ssh -p 2220 bandit30@bandit.labs.overthewire.org
