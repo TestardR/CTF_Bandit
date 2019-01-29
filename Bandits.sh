@@ -291,3 +291,15 @@ cd repo
 cat readme
 0ef186ac70e04ea33b4c1853d2526fa2
 ssh -p 2220 bandit28@bandit.labs.overthewire.org
+
+lvl 28 -- > lvl 29
+mkdir /tmp/rom28
+cd /tmpt/rom28
+git clone ssh://bandit28-git@localhost/home/bandit28-git/repo
+0ef186ac70e04ea33b4c1853d2526fa2
+cd repo
+cat README.md
+git log
+git show 073c27c130e6ee407e12faad1dd3848a110c4f95
+bbc96594b4e001778eee9975372716b23
+ssh -p 2220 bandit29@bandit.labs.overthewire.org
