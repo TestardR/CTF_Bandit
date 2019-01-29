@@ -283,3 +283,11 @@ ls -l bandit27-do
 ssh -p 2220 bandit27@bandit.labs.overthewire.org
 
 lvl 27 --> lvl 28
+mkdir /tmp/rom27
+cd /tmp/rom27
+git clone "ssh://bandit27-git@localhost/home/bandit27-git/repo"
+3ba3118a22e93127a4ed485be72ef5ea
+cd repo
+cat readme
+0ef186ac70e04ea33b4c1853d2526fa2
+ssh -p 2220 bandit28@bandit.labs.overthewire.org
