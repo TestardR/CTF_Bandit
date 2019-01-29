@@ -347,5 +347,12 @@ git commit -m "file added"
 git push
 47e603bb428404d265f59c42920d81e5
 56a9bf19c63d650ce78e6ec0354ee45e
+ssh -p 2220 bandit32@bandit.labs.overthewire.org
 
 lvl 32 --> lvl 33
+$0
+id /etc
+ls /etc/band*
+ls /etc/bandit_pass/bandit33
+c9c3199ddf4121b10cf581a98d51caee
+ssh -p 2220 bandit33@bandit.labs.overthewire.org
