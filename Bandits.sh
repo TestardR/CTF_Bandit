@@ -265,4 +265,21 @@ cat bandit26.sshkey
 ssh -i bandit26.sshkey bandit26@localhost // reduce screen size a lot 
 v
 :e /etc/bandit_pass/bandit26
+ssh -p 2220 bandit25@bandit.labs.overthewire.org
 5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
+
+lvl 26 --> lvl 27
+uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+ssh -p 2220 bandit25@bandit.labs.overthewire.org
+ssh -i bandit26.sshkey bandit26@localhost // reduce screen size a lot 
+v
+:set shell=/bin/bash
+:shell
+ls -l bandit27-do
+./bandit27-do 
+./bandit27-do id
+./bandit27-do cat /etc/bandit_pass/bandit27
+3ba3118a22e93127a4ed485be72ef5ea
+ssh -p 2220 bandit27@bandit.labs.overthewire.org
+
+lvl 27 --> lvl 28
